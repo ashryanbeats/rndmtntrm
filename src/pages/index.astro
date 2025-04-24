@@ -1,11 +1,174 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="RANDOM TANTRUM">
+  <main>
+    <h1>RANDOM<br />TANTRUM</h1>
+
+    <div class="grid">
+      <a
+        href="https://www.collxn.com"
+        class="box"
+        target="_blank"
+        rel="noopener">Collxn</a
+      >
+    </div>
+  </main>
+
+  <footer>
+    <div id="copyright"></div>
+  </footer>
 </Layout>
+
+<script>
+  const updateCopyright = () => {
+    const currentYear = new Date().getFullYear();
+    const element = document.getElementById("copyright");
+
+    if (!element) return;
+
+    if (currentYear <= 2025) {
+      element.textContent = "(c) 2025 Random Tantrum, LLC";
+    } else {
+      element.textContent = `(c) 2025–${currentYear} Random Tantrum, LLC`;
+    }
+  };
+
+  // Run on page load
+  updateCopyright();
+
+  // Also update on New Year if page is kept open
+  setInterval(
+    () => {
+      updateCopyright();
+    },
+    1000 * 60 * 60
+  ); // Check every hour
+</script>
+
+<style>
+  main {
+    font-family: "Vaticanus", sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    color: black;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: clamp(4rem, 15vw, 12rem);
+    line-height: 0.9;
+    margin: 0;
+    text-align: center;
+    letter-spacing: -0.05em;
+    font-weight: 400;
+    animation: flicker 4s infinite alternate;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin: 0;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .about {
+    border: 2px solid black;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .about p {
+    margin: 0.5rem 0 0;
+    opacity: 0.7;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .box {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: transform 0.2s;
+    text-decoration: none;
+    display: block;
+  }
+
+  .box:hover {
+    transform: translateY(-5px);
+    background-color: #00c3ff;
+  }
+
+  .contact {
+    margin-top: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    padding-top: 1rem;
+  }
+
+  .contact p {
+    margin: 0.5rem 0 0;
+    opacity: 0.7;
+  }
+
+  footer {
+    font-family: "Vaticanus", sans-serif;
+    border-top: 1px solid black;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .test-symbol {
+    margin-top: 0.5rem;
+    font-family: "Vaticanus", sans-serif;
+  }
+
+  @keyframes flicker {
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      opacity: 1;
+    }
+    20%,
+    24%,
+    55% {
+      opacity: 0.5;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

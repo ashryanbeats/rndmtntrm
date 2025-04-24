@@ -1,4 +1,56 @@
-# Astro Starter Kit: Basics
+# RANDOM TANTRUM
+
+A brutalist web presence for Random Tantrum, designed with attitude.
+
+## 🧠 Features
+
+- Brutalist design aesthetic
+- Custom Vaticanus font
+- Responsive layout
+- Glitch animations
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 📦 Deployment to GitHub Pages
+
+1. Fork or clone this repository
+2. Update `astro.config.mjs`:
+   ```js
+   site: 'https://YOUR_GITHUB_USERNAME.github.io',
+   ```
+3. Push to your GitHub repository
+4. Enable GitHub Pages in your repository settings:
+   - Go to Settings > Pages
+   - Source: GitHub Actions
+   - Your site will deploy automatically on push to main branch
+
+## 🎨 Design Notes
+
+The design follows brutalist principles with:
+
+- High contrast black/white color scheme
+- Raw typography using Vaticanus font
+- Exposed structure and sharp edges
+- Deliberate visual glitches
+- Minimal styling
+
+## 📝 License
+
+- Vaticanus font: Public Domain (https://www.fontspace.com/vaticanus-font-f128585)
 
 ```sh
 npm create astro@latest -- --template basics
