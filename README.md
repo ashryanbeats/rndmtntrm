@@ -28,15 +28,21 @@ npm run preview
 ## 📦 Deployment to GitHub Pages
 
 1. Fork or clone this repository
-2. Update `astro.config.mjs`:
+2. Update `astro.config.mjs` with your GitHub username:
    ```js
    site: 'https://YOUR_GITHUB_USERNAME.github.io',
+   base: '/rndmtntrm', // or your repository name
    ```
 3. Push to your GitHub repository
 4. Enable GitHub Pages in your repository settings:
    - Go to Settings > Pages
    - Source: GitHub Actions
    - Your site will deploy automatically on push to main branch
+
+**Troubleshooting:**
+
+- If you get GitHub Actions errors, check the workflow file at `.github/workflows/deploy.yml`
+- Make sure all paths in your code include the base path with `import.meta.env.BASE_URL`
 
 ## 🎨 Design Notes
 
