@@ -1,4 +1,5 @@
 ---
+import BaseUrlFixer from "../components/BaseUrlFixer.astro";
 const { title = "RANDOM TANTRUM" } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
 ---
@@ -18,21 +19,14 @@ const baseUrl = import.meta.env.BASE_URL;
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <BaseUrlFixer />
   </head>
   <body>
     <slot />
   </body>
 </html>
 
-<style is:global define:vars={{ baseUrl: import.meta.env.BASE_URL }}>
-  @font-face {
-    font-family: "Vaticanus";
-    src: url(var(--baseUrl) + "/Vaticanus-G3yVG.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
+<style is:global>
   :root {
     --primary-color: #00c3ff;
   }

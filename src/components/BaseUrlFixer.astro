@@ -1,0 +1,38 @@
+---
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<script define:vars={{ baseUrl }}>
+  // This script fixes font path references at runtime
+  document.addEventListener("DOMContentLoaded", () => {
+    // Find all link elements with rel="preload" and href containing "/Vaticanus"
+    const preloadLinks = document.querySelectorAll(
+      'link[rel="preload"][href*="Vaticanus"]'
+    );
+
+    // Update preload links to include base path
+    preloadLinks.forEach((link) => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith(baseUrl) && !href.startsWith("http")) {
+        link.setAttribute(
+          "href",
+          `${baseUrl}${href.startsWith("/") ? "" : "/"}${href}`
+        );
+      }
+    });
+
+    // Create a new style element with the correct font path
+    const styleElement = document.createElement("style");
+    styleElement.textContent = `
+      @font-face {
+        font-family: "Vaticanus";
+        src: url("${baseUrl}/Vaticanus-G3yVG.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+    `;
+    document.head.appendChild(styleElement);
+  });
+</script>
+
