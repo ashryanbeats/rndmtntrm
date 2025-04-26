@@ -1,0 +1,6 @@
+---
+description: Managing dependencies
+globs: 
+alwaysApply: false
+---
+When installing, troubleshooting, or otherwise managing depenedencies, *do not* try using a CDN to work around issues. All dependencies should be handled via npm modules unless the user otherwise approves it.

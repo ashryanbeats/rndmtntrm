@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+After making code changes (including file creation or deletion), run `npm run check`, then follow these guidelines:
+
+- ESlint issues should be handled by you, *unless* there's a judgement call (e.g., how to break up a component into smaller components, major removals, etc.).
+- TypeScript issues should be handled by you.
+- Knip issues should be reported to the user, but you can make recommendations..
