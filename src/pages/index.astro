@@ -1,10 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import GlitchText from "../components/GlitchText";
 ---
 
 <Layout title="RANDOM TANTRUM">
   <main>
-    <h1>RANDOM<br />TANTRUM</h1>
+    <h1>
+      <GlitchText text="RANDOM" client:load /><br /><GlitchText
+        text="TANTRUM"
+        client:load
+      />
+    </h1>
 
     <div class="grid">
       <a

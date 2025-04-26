@@ -1,25 +1,24 @@
 ---
-// For custom domains, we don't need to manipulate paths
-const isCustomDomain = !import.meta.env.BASE_URL || import.meta.env.BASE_URL === '/';
+const isCustomDomain = !import.meta.env.BASE_URL || import.meta.env.BASE_URL === "/";
 ---
 
 {isCustomDomain ? null : (
 <script define:vars={{ baseUrl: import.meta.env.BASE_URL }}>
   // Only run this on GitHub Pages with base path (not custom domains)
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     // Find all link elements with rel="preload" and href containing "/Vaticanus"
-    const preloadLinks = document.querySelectorAll('link[rel="preload"][href*="Vaticanus"]');
+    const preloadLinks = document.querySelectorAll("link[rel=\"preload\"][href*=\"Vaticanus\"]");
     
     // Update preload links to include base path
     preloadLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      if (href && !href.startsWith(baseUrl) && !href.startsWith('http')) {
-        link.setAttribute('href', `${baseUrl}${href.startsWith('/') ? '' : '/'}${href}`);
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith(baseUrl) && !href.startsWith("http")) {
+        link.setAttribute("href", `${baseUrl}${href.startsWith("/") ? "" : "/"}${href}`);
       }
     });
 
     // Create a new style element with the correct font path
-    const styleElement = document.createElement('style');
+    const styleElement = document.createElement("style");
     styleElement.textContent = `
       @font-face {
         font-family: "Vaticanus";

@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["Collxn", "rndmtntrm", "Vaticanus"]
+  "cSpell.words": ["Collxn", "rndmtntrm", "Vaticanus"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro",
+    "typescript",
+    "typescriptreact"
+  ]
 }
