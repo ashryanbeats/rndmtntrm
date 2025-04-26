@@ -10,7 +10,9 @@
     "predeploy": "npm run build",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "knip": "knip"
+    "knip": "knip",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run lint ; npm run typecheck ; npm run knip"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.5",
