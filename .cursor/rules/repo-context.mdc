@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Before doing anything, take these into account:
+
+- [package.json](mdc:package.json)
+- [astro.config.mjs](mdc:astro.config.mjs)
+- [eslint.config.js](mdc:eslint.config.js)
+- [tsconfig.json](mdc:tsconfig.json)
+- [knip.json](mdc:knip.json)

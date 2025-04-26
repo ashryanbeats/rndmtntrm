@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import GlitchText from "../components/GlitchText";
-import AnimationDemo from "../components/AnimationDemo";
 ---
 
 <Layout title="RANDOM TANTRUM">
@@ -12,8 +11,6 @@ import AnimationDemo from "../components/AnimationDemo";
         client:load
       />
     </h1>
-
-    <AnimationDemo client:load />
 
     <div class="grid">
       <a
@@ -78,7 +75,6 @@ import AnimationDemo from "../components/AnimationDemo";
     text-align: center;
     letter-spacing: -0.05em;
     font-weight: 400;
-    animation: flicker 4s infinite alternate;
   }
 
   h2 {

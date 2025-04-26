@@ -2,18 +2,3 @@
   display: inline-block;
   position: relative;
 }
-
-.glitch-low {
-  opacity: 0.9;
-  transform: translateX(2px);
-}
-
-.glitch-medium {
-  opacity: 0.7;
-  transform: translateX(-3px) skewX(2deg);
-}
-
-.glitch-high {
-  opacity: 0.5;
-  transform: translateX(5px) skewY(-1deg) skewX(-2deg);
-}

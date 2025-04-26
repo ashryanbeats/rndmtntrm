@@ -1,5 +1,12 @@
 {
-  "cSpell.words": ["Collxn", "rndmtntrm", "Vaticanus"],
+  "cSpell.words": [
+    "aeiou",
+    "AEIOU",
+    "animejs",
+    "Collxn",
+    "rndmtntrm",
+    "Vaticanus"
+  ],
   "eslint.validate": [
     "javascript",
     "javascriptreact",
