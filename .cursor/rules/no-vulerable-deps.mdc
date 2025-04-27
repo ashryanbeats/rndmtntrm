@@ -1,0 +1,8 @@
+---
+description: When managing npm dependencies (npm install, etc)
+globs: 
+alwaysApply: false
+---
+If you install an npm dependency and any issues are reported, that is bad and not allowed.
+
+If the issue is fixable with `npm audit fix`, do it *now*. If not, remove the dep from [package.json](mdc:package.json) and uninstall it. Then consider potential options and talk to the user about what might be done.

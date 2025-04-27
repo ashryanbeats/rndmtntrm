@@ -1,0 +1,31 @@
+/* Layout styles */
+
+/* Main content area */
+.main-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main-centered {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--text-color);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}

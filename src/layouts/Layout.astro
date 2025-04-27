@@ -1,6 +1,8 @@
 ---
 import BaseUrlFixer from "../components/BaseUrlFixer.astro";
+import "../styles/index.css";
 const { title = "RANDOM TANTRUM" } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL || "";
 ---
 
 <!doctype html>
@@ -24,28 +26,3 @@ const { title = "RANDOM TANTRUM" } = Astro.props;
     <slot />
   </body>
 </html>
-
-<style is:global>
-  :root {
-    --primary-color: #00c3ff;
-  }
-
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    color: black;
-    overflow-x: hidden;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  ::selection {
-    background-color: var(--primary-color);
-    color: white;
-  }
-</style>

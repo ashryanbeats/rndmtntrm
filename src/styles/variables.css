@@ -1,0 +1,11 @@
+/* CSS Variables */
+
+:root {
+  /* Colors */
+  --primary-color: #00c3ff;
+  --text-color: black;
+  --bg-color: white;
+
+  /* Typography */
+  --font-primary: "Vaticanus", sans-serif;
+}

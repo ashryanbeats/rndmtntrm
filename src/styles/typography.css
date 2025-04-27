@@ -1,0 +1,35 @@
+/* Typography styles */
+
+/* Font declaration */
+@font-face {
+  font-family: "Vaticanus";
+  src: url("/Vaticanus-G3yVG.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Typography classes */
+.rt-text {
+  font-family: var(--font-primary);
+}
+
+.rt-heading {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+}
+
+/* Heading sizes */
+.heading-xl {
+  font-size: clamp(8rem, 25vw, 15rem);
+  line-height: 0.8;
+  margin: 0;
+}
+
+.heading-lg {
+  font-size: clamp(4rem, 15vw, 12rem);
+  margin: 0;
+  text-align: center;
+}

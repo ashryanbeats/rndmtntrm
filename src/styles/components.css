@@ -1,0 +1,99 @@
+/* Component styles */
+
+/* Grid system */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Boxes & Cards */
+.box {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+  text-decoration: none;
+  display: block;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  background-color: var(--primary-color);
+}
+
+/* Messages */
+.message {
+  text-align: center;
+  border: 2px solid var(--text-color);
+  padding: 1.5rem;
+  max-width: 500px;
+  width: 100%;
+}
+
+.message p {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Buttons & Links */
+.button {
+  display: inline-block;
+  color: var(--bg-color);
+  background-color: var(--text-color);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+/* Effects */
+.glitch {
+  animation: glitch 1s infinite linear alternate-reverse;
+  display: inline-block;
+  position: relative;
+  transform: translateZ(0);
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-5px, 5px);
+    color: var(--primary-color);
+  }
+  40% {
+    transform: translate(-5px, -5px);
+  }
+  60% {
+    transform: translate(5px, 5px);
+    color: var(--primary-color);
+  }
+  80% {
+    transform: translate(5px, -5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
