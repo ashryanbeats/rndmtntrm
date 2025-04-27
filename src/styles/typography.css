@@ -3,7 +3,7 @@
 /* Font declaration */
 @font-face {
   font-family: "Vaticanus";
-  src: url("/Vaticanus-G3yVG.ttf") format("truetype");
+  src: url("fonts/Vaticanus-G3yVG.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

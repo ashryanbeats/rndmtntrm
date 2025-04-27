@@ -1,8 +1,9 @@
 ---
-import BaseUrlFixer from "../components/BaseUrlFixer.astro";
+// Import styles
 import "../styles/index.css";
+
+// Props
 const { title = "RANDOM TANTRUM" } = Astro.props;
-const baseUrl = import.meta.env.BASE_URL || "";
 ---
 
 <!doctype html>
@@ -10,17 +11,17 @@ const baseUrl = import.meta.env.BASE_URL || "";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Use relative paths for consistent behavior across environments -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link
       rel="preload"
-      href="/Vaticanus-G3yVG.ttf"
+      href="fonts/Vaticanus-G3yVG.ttf"
       as="font"
       type="font/ttf"
       crossorigin
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <BaseUrlFixer />
   </head>
   <body>
     <slot />
