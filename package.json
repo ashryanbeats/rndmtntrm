@@ -3,8 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev": "node scripts/generate-robots-txt.js && astro dev",
+    "build": "node scripts/generate-robots-txt.js && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "predeploy": "npm run build",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.2.5",
+    "@astrojs/sitemap": "^3.3.1",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "animejs": "^4.0.2",
