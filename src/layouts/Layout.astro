@@ -4,6 +4,9 @@ import "../styles/index.css";
 
 // Props
 const { title = "RANDOM TANTRUM" } = Astro.props;
+
+// Generate canonical URL
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -21,6 +24,7 @@ const { title = "RANDOM TANTRUM" } = Astro.props;
       crossorigin
     />
     <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
   </head>
   <body>
