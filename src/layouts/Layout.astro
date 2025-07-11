@@ -7,6 +7,10 @@ const { title = "RANDOM TANTRUM" } = Astro.props;
 
 // Generate canonical URL
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Check for "ref" param in URL
+const searchParams = new URL(Astro.url, Astro.site).searchParams;
+const hasRefParam = searchParams.has("ref");
 ---
 
 <!doctype html>
@@ -25,6 +29,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonicalURL} />
+    {hasRefParam && <meta name="robots" content="noindex, follow" />}
     <title>{title}</title>
   </head>
   <body>
