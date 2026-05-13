@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "node scripts/generate-robots-txt.js && astro dev",
+    "test": "node --test",
     "build": "node scripts/generate-robots-txt.js && astro build",
     "preview": "astro preview",
     "astro": "astro",

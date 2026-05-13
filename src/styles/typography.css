@@ -17,19 +17,39 @@
 .rt-heading {
   font-family: var(--font-primary);
   font-weight: 400;
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
   line-height: 0.9;
 }
 
 /* Heading sizes */
 .heading-xl {
-  font-size: clamp(8rem, 25vw, 15rem);
+  font-size: 10rem;
   line-height: 0.8;
   margin: 0;
 }
 
 .heading-lg {
-  font-size: clamp(4rem, 15vw, 12rem);
+  font-size: 8rem;
   margin: 0;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .heading-xl {
+    font-size: 7rem;
+  }
+
+  .heading-lg {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-xl {
+    font-size: 5rem;
+  }
+
+  .heading-lg {
+    font-size: 3.25rem;
+  }
 }
