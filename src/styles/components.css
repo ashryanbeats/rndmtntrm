@@ -37,6 +37,71 @@
   background-color: var(--primary-color);
 }
 
+.property-section {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.property-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.property-heading {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.property-grid {
+  width: min(100%, 72rem);
+  margin: 0 auto;
+}
+
+.property-card {
+  min-height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.property-title {
+  display: block;
+  font-size: 2.5rem;
+  line-height: 0.95;
+}
+
+.property-description {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+  .property-heading {
+    font-size: 2rem;
+  }
+
+  .property-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .property-heading {
+    font-size: 1.5rem;
+  }
+
+  .property-card {
+    min-height: 8rem;
+  }
+}
+
 /* Messages */
 .message {
   text-align: center;

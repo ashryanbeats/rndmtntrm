@@ -12,13 +12,44 @@ import GlitchText from "../components/GlitchText";
       />
     </h1>
 
-    <div class="grid">
+    <section class="property-section" aria-labelledby="properties-heading">
+      <h2 id="properties-heading" class="property-heading">
+        HTTP and LLM success<br />for small businesses.
+      </h2>
+    </section>
+
+    <div class="grid property-grid">
       <a
-        href="https://www.collxn.com"
-        class="box"
+        href="https://www.collxn.com/"
+        class="box property-card"
         target="_blank"
-        rel="noopener">Collxn</a
+        rel="noopener"
       >
+        <span class="property-title">Collxn</span>
+        <span class="property-description"
+          >daily vinyl collection rediscovery</span
+        >
+      </a>
+      <a
+        href="https://www.hanayou.studio/"
+        class="box property-card"
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="property-title">HanaYou</span>
+        <span class="property-description"
+          >Kyoto ikebana classes and guides</span
+        >
+      </a>
+      <a
+        href="https://www.ashryan.io/"
+        class="box property-card"
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="property-title">ashryan.io</span>
+        <span class="property-description">product leadership and writing</span>
+      </a>
     </div>
   </main>
 
@@ -49,6 +80,6 @@ import GlitchText from "../components/GlitchText";
     () => {
       updateCopyright();
     },
-    1000 * 60 * 60
+    1000 * 60 * 60,
   ); // Check every hour
 </script>
