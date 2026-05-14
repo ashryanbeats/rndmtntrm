@@ -3,9 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "node scripts/generate-robots-txt.js && astro dev",
+    "dev": "astro dev",
     "test": "node --test",
-    "build": "node scripts/generate-robots-txt.js && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "predeploy": "npm run build",
@@ -13,7 +13,7 @@
     "lint:fix": "eslint --fix",
     "knip": "knip",
     "typecheck": "tsc --noEmit",
-    "check": "npm run lint ; npm run typecheck ; npm run knip"
+    "check": "node scripts/run-checks.js"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.5",
