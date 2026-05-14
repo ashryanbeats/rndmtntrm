@@ -3,10 +3,12 @@
 /* Font declaration */
 @font-face {
   font-family: "Vaticanus";
-  src: url("fonts/Vaticanus-G3yVG.ttf") format("truetype");
+  src:
+    url("/vaticanus-font/misc/Vaticanus-cc60.woff2") format("woff2"),
+    url("/fonts/Vaticanus-G3yVG.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 /* Typography classes */
