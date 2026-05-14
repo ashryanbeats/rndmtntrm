@@ -61,12 +61,13 @@ test("font assets use root-relative public paths", async () => {
 test("layout exposes a crawlable meta description", async () => {
   const layout = await readProjectFile("src/layouts/Layout.astro");
   const indexPage = await readProjectFile("src/pages/index.astro");
-  const description =
-    "Random Tantrum builds HTTP and LLM systems for small businesses while publishing Collxn, HanaYou, and ashryan.io.";
 
   assert.match(layout, /description = "Random Tantrum builds HTTP and LLM/);
   assert.match(layout, /<meta name="description" content={description} \/>/);
-  assert.match(indexPage, new RegExp(`description="${description}"`));
+  assert.match(
+    indexPage,
+    /description="Random Tantrum builds HTTP and LLM systems for small businesses\."/,
+  );
 });
 
 test("robots.txt is generated as a static Astro route", async () => {
