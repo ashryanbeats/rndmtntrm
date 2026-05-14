@@ -1,5 +1,4 @@
 import eslintPluginAstro from "eslint-plugin-astro";
-import eslintPluginReact from "eslint-plugin-react";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
@@ -50,13 +49,7 @@ export default [
   {
     files: ["src/**/*.jsx", "src/**/*.tsx"],
     plugins: {
-      react: eslintPluginReact,
       "react-hooks": eslintPluginReactHooks,
-    },
-    settings: {
-      react: {
-        version: "detect",
-      },
     },
     rules: {
       "react-hooks/rules-of-hooks": "error",
